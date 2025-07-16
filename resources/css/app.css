@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mt-6 {
+    margin-top: 6rem !important;
+}
+
+.mt-10 {
+    margin-top: 10rem !important;
+}
+
+.mt-13 {
+    margin-top: 13rem !important;
+}
+
+.mt-14 {
+    margin-top: 14rem !important;
+}
+
+.mt-15 {
+    margin-top: 15rem !important;
+}
+
+.mt-16 {
+    margin-top: 16rem !important;
+}
+
+.mt-17 {
+    margin-top: 17rem !important;
+}
+
+.btn-secondary {
+    background-color: #00BDF8 !important;
+    border-color: #00BDF8 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #00BDF8 !important;
+}
