@@ -98,6 +98,9 @@ Route::middleware(['auth', DisableCache::class, RememberMe::class])->prefix('sup
             Route::put('/updateUser/{id}')->name('edit.update.user');
             Route::get('/profileDirectory/{id}','show')->name('Perfil de usuario');
 
+            Route::get('/profilesDirectories', 'profilesDirectories')->name('Equipo.directorio');
+
+
         });
 
     // Controladores de Roles SuperAdministrador

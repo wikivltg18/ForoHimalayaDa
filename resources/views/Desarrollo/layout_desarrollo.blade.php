@@ -375,6 +375,9 @@
                         <ul class="submenu">
                             <li><a href="{{ url('superadmin/roles') }}">Roles</a></li>
                         </ul>
+                        <ul class="submenu">
+                            <li><a href="{{ url('superadmin/profilesDirectories') }}">Equipo Directorio</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

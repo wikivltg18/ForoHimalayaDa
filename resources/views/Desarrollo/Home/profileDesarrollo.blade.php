@@ -50,9 +50,10 @@
                                     <div class="img-container">
                                         @csrf
                                         @method('PUT')
+                                        
                                         <img id="image"
                                             src="
-                                                {{ asset($userAuthenticate->img_perfil ? 'storage/images/' . $userAuthenticate->img_perfil : 'vendors/images/default.png') }}"
+                                                {{ asset($profile->img_perfil ? 'storage/images/' . $profile->img_perfil : 'vendors/images/default.png') }}"
                                             alt="Picture" enctype="multipart/form-data">
                                     </div>
                                 </div>
@@ -66,38 +67,38 @@
                     </div>
                 </div>
             </div>
-            <h5 class="mb-0 text-center h5">{{ $userAuthenticate->nombre }} {{ $userAuthenticate->apellido }}</h5>
-            <p class="text-center text-muted font-14">{{ $userAuthenticate->cargo }}</p>
+            <h5 class="mb-0 text-center h5">{{ $profile->nombre }} {{ $profile->apellido }}</h5>
+            <p class="text-center text-muted font-14">{{ $profile->cargo }}</p>
             <div class="profile-info">
                 <h5 class="mb-20 h5 text-blue">Información de contacto</h5>
                 <ul>
                     <li>
                         <span>Dirección de correo electrónico:</span>
-                        {{ $userAuthenticate->email ?? '¡No es posible encontrar un correo electronico!' }}
+                        {{ $profile->email ?? '¡No es posible encontrar un correo electronico!' }}
                     </li>
                     <li>
                         <span>Número de teléfono:</span>
-                        {{ $userAuthenticate->telefono ?? '¡Agrega un número de telefono!' }}
+                        {{ $profile->telefono ?? '¡Agrega un número de telefono!' }}
                     </li>
                     <li>
                         <span>Fecha de nacimiento:</span>
-                        {{ $userAuthenticate->fecha_nacimiento ?? '¡No es posible encontrar un correo electronico!' }}
+                        {{ $profile->fecha_nacimiento ?? '¡No es posible encontrar un correo electronico!' }}
                     </li>
                     <li>
                         <span>Número de referencia:</span>
-                        {{ $userAuthenticate->telefono_referencia }}
+                        {{ $profile->telefono_referencia }}
                     </li>
                     <li>
                         <span>Dirección:</span>
-                        {{ $userAuthenticate->direccion ?? '¡Agrega tu dirección!' }}
+                        {{ $profile->direccion ?? '¡Agrega tu dirección!' }}
                     </li>
                     <li>
                         <span>Rol:</span>
-                        {{ $userAuthenticate->rol->nombre ?? '¡No es posible encontrar el rol especificado!.' }}
+                        {{ $profile->rol->nombre ?? '¡No es posible encontrar el rol especificado!.' }}
                     </li>
                     <li>
                         <span>Area asignada:</span>
-                        {{ $userAuthenticate->area->nombre ?? '¡No es posible encontrar el area asignada!.' }}
+                        {{ $profile->area->nombre ?? '¡No es posible encontrar el area asignada!.' }}
                     </li>
                 </ul>
             </div>
@@ -241,7 +242,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for=""><span class="text-danger"
-                                                            value={{ $userAuthenticate->nombre }}>*</span>Nombres:
+                                                            value={{ $profile->nombre }}>*</span>Nombres:
                                                     </label>
                                                     <input type="text" class="form-control">
                                                 </div>

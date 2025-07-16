@@ -53,6 +53,18 @@ class Usuario extends Authenticatable
         return $this->belongsTo(Area::class, 'area_id', 'id');
     }
 
+
+        /**
+     * Trae el área que pertenece el usuario.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function areas(): BelongsTo
+    {
+        return $this->belongsTo(Area::class, 'area_id', 'id');
+    }
+
+
     /**
      *Los atributos que deben ocultarse para la serialización.
      *

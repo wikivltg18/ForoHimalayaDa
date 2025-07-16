@@ -78,6 +78,7 @@
     <script>
         $(document).ready(function() {
             $('#data-table-servicios').DataTable({
+                scrollX: true,
                 ajax: {
                     url: '{{ route('api.servicios') }}',
                     type: 'GET'

@@ -26,7 +26,7 @@
 @endpush
 
 @section('button-press')
-    <a href="{{ url('usuariosEquipo') }}" class="btn btn-secondary"><i class="icon-copy fa fa-plus" aria-hidden="true"></i> Volver</a>
+    <a href="{{ url('superadmin/usuariosEquipo') }}" class="btn btn-secondary"><i class="icon-copy fa fa-plus" aria-hidden="true"></i> Volver</a>
 @endsection
 
 

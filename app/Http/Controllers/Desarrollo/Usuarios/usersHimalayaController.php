@@ -148,6 +148,19 @@ class usersHimalayaController
 
     }
 
+    /**
+ * Show the form for creating a new resource.
+ */
+public function create()
+{
+    $areas = Area::all();
+    $roles = Roles::all();
+    $nameRoute = Route::currentRouteName();
+    return view('Desarrollo.Equipo.crearUsuario', compact('nameRoute','areas', 'roles')); 
+    
+}
+
+
 
     public function profilesDirectories(Request $request)
     {
@@ -185,6 +198,7 @@ class usersHimalayaController
     public function show($id)
     {
         $profile = Usuario::findOrFail($id);
+        //Aplica solo si se desea visualizar el perfil del usuario autenticado $userAuthenticate = auth()->user();
         $nameRoute = Route::currentRouteName();
         return view('Desarrollo.Home.profileDesarrollo', compact('nameRoute', 'profile'));
 
