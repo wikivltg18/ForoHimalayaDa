@@ -12,11 +12,14 @@
 
             .btn-secondary {
                 background-color: #15baee !important;
+                color: #fff !important;
                 border-color: #15baee !important;
             }
 
             .btn-secondary:hover {
-                background-color: #15baee !important;
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                border-color: #15baee !important;
             }
 
             .color-header-table {
@@ -62,9 +65,7 @@
     @endpush
 
 @section('button-press')
-    <a href="{{ url('superadmin/createUser') }}" class="btn btn-secondary"><i
-            class="icon-copy fa fa-plus"aria-hidden="true"></i>
-        Registrar nuevo usuario</a>
+    <a href="{{ url('superadmin/createUser') }}" class="btn btn-secondary">Registrar nuevo usuario</a>
 @endsection
 
 @if (session('userSuccess'))
@@ -123,7 +124,7 @@
 
 {{-- star inputs group --}}
 <form action="{{ route('Usuarios') }}" method="GET">
-    <div class="pb-4 row justify-content-between">
+    <div class="pb-4 row justify-content-center">
         <div class="col-md-4">
             <label for="">Nombre: </label>
             <div class="input-group ">
@@ -141,9 +142,11 @@
                         </option>
                     @endforeach
                 </select>
-                <button type="submit" class="btn btn-primary">Buscar</button>
-                <a href="{{ route('Usuarios') }}" class="btn btn-secondary">Limpiar</a>
             </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center justify-content-end">
+            <div class="col-md-6"><button type="submit" class="px-5 py-2 btn btn-secondary">Buscar</button></div>
+            <div class="col-md-6"><a href="{{ route('Usuarios') }}" class="px-5 py-2 btn btn-secondary">Limpiar</a></div>
         </div>
     </div>
 </form>

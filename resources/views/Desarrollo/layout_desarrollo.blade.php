@@ -350,34 +350,61 @@
                 <ul id="accordion-menu">
                     <li class="dropdown">
                         <a href="{{ url('superadmin/home') }}" class="dropdown-toggle no-arrow">
-                            <span class="micon icon-home"></span><span>Home</span>
+                            <span class="micon icon-home"></span><span>Inicio</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="{{ url('superadmin/Clientes') }}" class="dropdown-toggle no-arrow">
-                            <span class="micon icon-clientes"></span>
-                            Clientes</span>
+                            <span class="micon icon-clientes"></span><span>Clientes</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                       <a href="{{ url('superadmin/usuariosEquipo') }}" class="no-arrow dropdown-toggle "><span class="micon icon-equipo"></span>Usuarios</a>
-                    </li>
-                         <li class="dropdown">
                         <a class="dropdown-toggle">
-                            <span class="micon icon-copy fi-wrench"></span><span>Herramientas</span>
+                            <span class="micon icon-equipo"></span><span>Mi Equipo</span>
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ url('superadmin/Areas') }}">Areas</a></li>
+                            <li><a href="{{ url('superadmin/usuariosEquipo') }}">Usuarios</a></li>
                         </ul>
                         <ul class="submenu">
-                            <li><a href="{{ url('superadmin/servicios') }}">Servicios</a></li>
+                            <li><a href="{{ url('superadmin/Areas') }}">Áreas</a></li>
                         </ul>
                         <ul class="submenu">
                             <li><a href="{{ url('superadmin/roles') }}">Roles</a></li>
                         </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">
+                            <span class="micon icon-equipo"></span><span>Foro</span>
+                        </a>
                         <ul class="submenu">
-                            <li><a href="{{ url('superadmin/profilesDirectories') }}">Equipo Directorio</a></li>
+                            <li><a href="#">Diseño</a></li>
                         </ul>
+                        <ul class="submenu">
+                            <li><a href="#">Contenido</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#">D. Performance</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#">Estrategia</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#">Desarrollo</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#">Creatividad</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#">Ejecutivo Cuentas</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                    <a href="{{ url('superadmin/verCliente/1') }}" class="no-arrow dropdown-toggle "><span class="micon icon-equipo"></span>Tablero</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">
+                            <span class="micon icon-copy fi-wrench"></span><span>Herramientas</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -400,7 +427,7 @@
                                 <h3 style="color: #003B7B">{{ $nameRoute }}</h3>
                             </div>
                         </div>
-                        <div class="text-right col-md-6 col-sm-12">
+                        <div class="pt-4 text-right col-md-6 col-sm-12">
                             @yield('button-press')
                         </div>
                     </div>
