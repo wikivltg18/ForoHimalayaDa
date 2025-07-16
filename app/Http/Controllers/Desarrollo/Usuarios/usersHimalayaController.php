@@ -111,7 +111,7 @@ class usersHimalayaController
         $validateData = $request->validate([
             'nm-user' => 'required|string|max:45',
             'ap-user' => 'required|string|max:45',
-            'em-user' => 'required|email|unique:users,email',
+            'em-user' => 'required|email|unique:usuarios,email',
             'psw-user' => 'required|string|min:8',
             'cr-user' => 'required|string|max:85',
             'tf-user' => 'required|string|max:255',
@@ -123,7 +123,7 @@ class usersHimalayaController
             ],
             'fh-user' => 'required|date',
             'rl-user' => 'required|exists:roles,id|string',
-            'ar-user' => 'required|exists:area,id|string',
+            'ar-user' => 'required|exists:areas,id|string',
         ], $messages);
 
         Usuario::create([
@@ -157,7 +157,7 @@ public function create()
     $roles = Roles::all();
     $nameRoute = Route::currentRouteName();
     return view('Desarrollo.Equipo.crearUsuario', compact('nameRoute','areas', 'roles')); 
-    
+
 }
 
 
